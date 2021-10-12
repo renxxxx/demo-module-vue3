@@ -1,8 +1,9 @@
-import Vue from 'vue'
+
+import { createApp } from 'vue'
 import App from './App.vue'
 
-Vue.config.productionTip = false
+import popup from '@/components/popupindex'
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+ let app = createApp(App);
+ app.use(popup);
+ app.mount("#app");
